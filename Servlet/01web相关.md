@@ -2,7 +2,7 @@
     IIS
     Apache(C语言写的服务器)
     Tomcat(Apache旗下，Java语言服务器)
-# 常用的动态网页技术(根据客户端不同的情况选择不同的展现,不同的时间打开页面内容不同)：
+# 常用的动态网页技术(根据不同的情况选择不同的展现,不同的时间打开页面内容不同)：
     CGI(Common GateWay Interface)
     ASP(Active Server Page)
     PHP(Personal Home Page)

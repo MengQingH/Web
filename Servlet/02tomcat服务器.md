@@ -35,6 +35,39 @@ web应用目录--
     path:访问时输入的web应用名，即在url中访问时的名称
     docBase:web应用的绝对目录
 其他属性：
-reloadable:如果设为ture ，表示 tomcat 会自动更新 web应用，这个开销大，建议在开发过程中，可以设为true, 但是一旦真的发布了，则应当设为false;
-upackWAR:如果设为 ture ，则自动解压，否则不自动解压.
+    reloadable:如果设为ture ，表示 tomcat 会自动更新 web应用，这个开销大，建议在开发过程中，可以设为true, 但是一旦真的发布了，则应当设为false;
+    upackWAR:如果设为 ture ，则自动解压，否则不自动解压.
+
+
+# 浏览器访问一个web站点http://localhost:8080/MyWeb/hello.html的流程：
+    1 浏览器解析主机名localhost
+        ① 查询本地文件hosts中是否有该主机名的ip
+        ② 若①找不到，就用电脑默认的DNS服务器上查找该主机的ip
+    2 浏览器尝试连接web服务器
+    3 浏览器发出http请求
+    4 服务器解析主机
+    5 解析web应用
+    6 解析资源名(web.xml中的资源部署部分)
+    7 查询到资源位置
+# 配置域名方法(只在本机中访问有效)：
+    (1) 在C:\WINDOWS\system32\drivers\etc 下的host文件添加 (ip 想要的域名)
+    (2) 在tomcat 的server.xml文件添加主机名 
+        <Host name="域名" appBase="web应用路径”>
+                <Context path="/" docBase="路径" />
+        </Host>
+    (3) 配置首页面，如果连端口都不希望带，则可以吧tomcat的启动端口设为80即可.
+    (4) 重启生效
+
+
+# tomcat体系图：
+tomcat(server服务器)
+    |-service(服务)
+        |-connector(连接器1，可以通过不同的协议连接服务器)
+        |-connector(连接器2)
+        |-engine(引擎)
+            |-host1(主机，引擎中可以有多个主机)
+            |    |-context1(web应用，主机中可以有多个web应用)
+            |    |-context2(web应用)
+            |-host2(主机)
+        
 

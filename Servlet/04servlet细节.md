@@ -1,0 +1,2 @@
+# serclet多次映射
+客户端通过URL地址访问web服务器中的资源，所以servlet程序要被外界访问，必须把程序映射到url地址上，在web.xml文件中完成(03中servlet的部署)
