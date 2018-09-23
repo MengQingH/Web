@@ -8,27 +8,27 @@ servlet，java编写的服务器程序
     1 实现Servlet接口
     2 继承GenericServlet
     3 继承HttpServlet(常用，指能够处理http请求的servlet该类在实现接口时重写了service方法，该方法体内的代码会自动判断用户的请求方式，如为get请求，则调用doGet方法，如为post请求，则调用doPost方法)
-实例：用实现Servlet接口的方式开发一个Servlet
+实例：
+1.  用实现Servlet接口的方式开发一个Servlet
     WEB-INF目录下建立classes和lib文件夹，并配置
     建立servlet文件，编写代码
     在web.xml文件中部署servlet：根据serlvet规范，需要将Servlet部署到web.xml文件,该部署配置可以从examples下拷贝
-        ```xml
-        <servlet>   <!-- 用于注册servlet元素 -->
-        <!--servlet-name Servlet注册名, 该名字可以任意定义，默认就使用该Servlet的名字-->
-        <servlet-name>MyFirstServlet</servlet-name>三
-        <!--servlet-class servlet全路径，要指明该Servlet的包名+类名 -->
-        <servlet-class>com.hsp.MyFirstServlet</servlet-class> ④
-        </servlet>
-        ```
-        <servlet-mapping>   <!--Servlet的映射-->
-            <!--Servlet-name注册名，要和上面的注册名一样-->
-            <servlet-name>MyFirstServlet</servlet-name>②
-            <!--url-pattern url中访问该Servlet的资源名-->
-            <url-pattern>/ABC</url-pattern>①
-        </servlet-mapping>
-        <!-- 浏览器中调用流程http://localhost:8088/ABC ①②③④ 浏览器通过url中的资源名找到对应的服务器中的资源名称，再通过这个名称找到资源的位置>
-        ```
-使用HttpServlet的方式开发servlet：
+    ```xml
+    <servlet>   <!-- 用于注册servlet元素 -->
+    <!--servlet-name Servlet注册名, 该名字可以任意定义，默认就使用该Servlet的名字-->
+    <servlet-name>MyFirstServlet</servlet-name>三
+    <!--servlet-class servlet全路径，要指明该Servlet的包名+类名 -->
+    <servlet-class>com.hsp.MyFirstServlet</servlet-class> ④
+    </servlet>
+    <servlet-mapping>   <!--Servlet的映射-->
+        <!--Servlet-name注册名，要和上面的注册名一样-->
+        <servlet-name>MyFirstServlet</servlet-name>②
+        <!--url-pattern url中访问该Servlet的资源名-->
+        <url-pattern>/ABC</url-pattern>①
+    </servlet-mapping>
+    ```
+    浏览器中调用流程http://localhost:8088/ABC ①②③④ 浏览器通过url中的资源名找到对应的服务器中的资源名称，再通过这个名称找到资源的位置>
+2. 使用HttpServlet的方式开发servlet：
 ```java
     public class MyHttpServlet extends HttpServlet{
 
@@ -44,11 +44,6 @@ servlet，java编写的服务器程序
         }
     }
 ```
-# get提交和post的提交的区别
-    从安全看 get<post,因为get会把提交的信息显示到地址栏
-    从提交内容看 get<post get 一般不要大于2k, post理论上无限制，但是在实际开发中，建议不要大于64k
-    从速度看 get>post
-    Get可以保留uri中的参数，利于收藏
 
 
 # servlet工作时序图：
