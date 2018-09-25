@@ -3,6 +3,7 @@ Web服务器收到客户端的http请求，会针对每一次请求，分别创�
 
 # response对象常用函数：
     setStatus(int sc):设置响应状态码
+    setDateHeader(String name,long l):设置值为数值类型的消息头
     setHeader(String name,String value):设置响应消息头
     getWriter():获取PrintWriter对象回送数据
     getOutputStream():获取输出流回送数据

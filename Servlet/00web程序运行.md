@@ -9,15 +9,15 @@
 
 
 # 配置Servlet
-方法1：通过web.xml配置
-方法2：通过注解WebServlet配置servlet，常用属性：
-    name:String，指定Servlet 的 name 属性，等价于 <servlet-name>。如果没有显式指定，则该 Servlet 的取值即为类的全限定名。
-    urlPatterns:String[],指定一组 Servlet 的 URL 匹配模式。等价于<url-pattern>标签:@WebServlet(urlPatterns = {"/servlet"})
-    loadOnStartup:int,指定 Servlet 的加载顺序，等价于 <load-on-startup>标签。
-    initParams：WebInitParam[],指定一组 Servlet 初始化参数，该数组的元素为@WebInitParam(name = "", value = "")的形式，等价于<init-param>标签。
-    asyncSupported:boolean,声明 Servlet 是否支持异步操作模式，等价于<async-supported> 标签。
-    description:String,该 Servlet 的描述信息，等价于 <description>标签。
-    displayName:String,该 Servlet 的显示名，通常配合工具使用，等价于 <display-name>标签。
+    方法1：通过web.xml配置
+    方法2：通过注解WebServlet配置servlet，常用属性：
+* name:String，指定Servlet 的 name 属性，等价于 <servlet-name>。如果没有显式指定，则该 Servlet 的取值即为类的全限定名。
+* urlPatterns:String[],指定一组 Servlet 的 URL 匹配模式。等价于<url-pattern>标签:@WebServlet(urlPatterns = {"/servlet"})
+* loadOnStartup:int,指定 Servlet 的加载顺序，等价于 <load-on-startup>标签。
+* initParams：WebInitParam[],指定一组 Servlet 初始化参数，该数组的元素为@WebInitParam(name = "", value = "")的形式，等价于<init-param>标签。
+* asyncSupported:boolean,声明 Servlet 是否支持异步操作模式，等价于<async-supported> 标签。
+* description:String,该 Servlet 的描述信息，等价于 <description>标签。
+* displayName:String,该 Servlet 的显示名，通常配合工具使用，等价于 <display-name>标签。
 ```java
     @WebServlet(name = "t1",urlPatterns = {"/servlet"})
     @WebServlet(initParams = { @WebInitParam(name = "Site :", value = "http://roseindia.net"),@WebInitParam(name = "Rose", value = "India", description = "detail-info") })

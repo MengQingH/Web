@@ -34,11 +34,11 @@
     在Servlet的配置文件中，可以使用一个或多个<init-param>标签为servlet配置一些初始化参数。当servlet配置了初始化参数后，web容器会在创建Servlet对象时把这些参数封装到ServletConfig对象中，并在调用servlet的init方法时，将ServletConfig对象传递给servlet。进而通过ServletConfig对象可以得到当前servlet的初始化参数信息。
     1. 在Servlet中，可以通过getServletConfig对象获取ServletConfig对象，再调用ServletConfig对象的getInitParameter()方法传入定义的参数名获取参数的值
     2. 获取所有参数：通过ServletConfig的getInitParanmeterNames方法获取所有的参数名，保存在一个Enumeration中，再通过循环获取参数值
-        ```java
-        Enumeration<String> names = this.getServletConfig().getInitParameterNames();
-                while (names.hasMoreElements()){
-                    String name = names.nextElement();
-                    System.out.println(this.getServletConfig().getInitParameter(name));
-                }
-        ```
+```java
+Enumeration<String> names = this.getServletConfig().getInitParameterNames();
+        while (names.hasMoreElements()){
+            String name = names.nextElement();
+            System.out.println(this.getServletConfig().getInitParameter(name));
+        }
+```
 
