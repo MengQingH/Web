@@ -1,7 +1,7 @@
 # session域对象
-    Session是服务端的技术，服务器在运行时，可以为每一个用户的浏览器创建一个其独享的session对象，该浏览器再次访问该web资源时，可以获取session中的信息。其他浏览器访问该资源则不能访问该session，但是可以创建另外一个session
-* session为一个域对象，可以放入键值对，其中键名为String类型，值为Object类型
-* 在一个web资源中，一个浏览器对应一个session，其他浏览器不能访问其他的session
+    Session是服务端的技术，服务器在运行时，可以为每一个用户的浏览器创建一个其独享的session对象，该浏览器再次访问该web应用时，可以获取session中的信息。其他浏览器访问该应用则不能访问该session，但是可以创建另外一个session
+* session为一个域对象，可以放入属性，其中属性名为String类型，值为Object类型
+* 在一个web应用中，一个浏览器对应一个session，其他浏览器不能访问其他的session
 * 存在于服务器的内存中
 * 默认生命周期为30分钟
     * session的生命周期为发呆时间，即在该生命周期时间内未访问该session，就消亡，若重新访问，则重新计时。
@@ -11,8 +11,8 @@
 
 ## 常用函数
 * request.getSession(boolean):创建一个session对象，如果传入true或者无参数，则没有session时会自动创建，如果传入false，没有session时不会自动创建
-* setAttribute(String name,Object value):向session中放键值对
-* removeAttribute(name):移除该键值对
+* setAttribute(String name,Object value):向session中放入属性
+* removeAttribute(name):移除该属性
 * setMaxInactiveInterval(int):设置生命周期
 * invalidate():使session失效
 * getAttribute(name):取值

@@ -1,4 +1,5 @@
-# idea中servlet的运行
+# idea中servlet的创建
+## 创建servlet项目
 1. new project选择Web Application，并配置好服务器(Application server)
 2. 输入项目名，finished
 3. 在WEB-INF目录下新建classes(存放编译后的class文件)和lib(存放第三方包)文件夹
@@ -7,8 +8,7 @@
 6. 在Project Structure中选择Artifacts -> 选择+号 -> 选择Web Application:Exploded -> 选择from Modules -> 选择该项目
 7. 点击Run -> 选择 Edit Configurations -> 击“+”号 -> 选择“Tomcat Server” -> 选择“Local” -> 输入Name -> 点击configurations选择服务器路径 -> 点击deployment -> 点击+号 -> 选择Artifacts -> 右边application context中输入项目名 -> 点ok
 
-
-# 配置Servlet
+## 配置Servlet
     方法1：通过web.xml配置
     方法2：通过注解WebServlet配置servlet，常用属性：
 * name:String，指定Servlet 的 name 属性，等价于 <servlet-name>。如果没有显式指定，则该 Servlet 的取值即为类的全限定名。
@@ -22,6 +22,16 @@
     @WebServlet(name = "t1",urlPatterns = {"/servlet"})
     @WebServlet(initParams = { @WebInitParam(name = "Site :", value = "http://roseindia.net"),@WebInitParam(name = "Rose", value = "India", description = "detail-info") })
 ```
+
+
+
+
+
+
+
+
+
+
 
 
 #tomcat服务器中的运行

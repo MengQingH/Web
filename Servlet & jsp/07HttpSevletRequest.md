@@ -59,7 +59,7 @@ request.getRequestDispatcher("/Forward2").forward(request,response);//只能访�
 ```
 ## 域对象
     request对象是一个域对象，可以向对象中储存数据，需要的时候获取。
-    request对象通过setAttribute(String name,Object o)方法来储存一个键值对，需要的时候通过getAttribute(String name)方法传入键名获取值。request对象中的数据生命周期是一次请求，浏览器发出的请求在返回浏览器之前为一次请求
+    request对象通过setAttribute(String name,Object o)方法来储存一个属性，需要的时候通过getAttribute(String name)方法传入属性名名获取属性值。request对象中的数据生命周期是一次请求，浏览器发出的请求在返回浏览器之前为一次请求
 ```java
 //使用域对象在两个servlet之间传递数据
 request.setAttribute("username","mh");
