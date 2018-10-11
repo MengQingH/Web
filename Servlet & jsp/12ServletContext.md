@@ -1,14 +1,14 @@
 # ServletContext
-    属于域对象，类似一个公用的空间，所有的用户都可以访问。
+属于域对象，类似一个公用的空间，所有的用户都可以访问。
 
 * web容器启动时，会为每一个web应用创建一个ServletContext对象，代表当前web应<!>
 * web应用启动时自动创建，web应用关闭时或服务器关闭时销毁
 * 由于一个web应用的所有Servlet对象共享同一个ServletContext对象，因此可以通过该对象实现通信
 * 应用
-    * 通过ServletContext对象实现数据共享
-    * 获取web应用的初始化参数(所有servlet共享的参数)
-    * 实现servlet的转发
-    * 利用ServletContext对象读取资源文件(.properties文件)
+    1. 通过ServletContext对象实现数据共享
+    2. 获取web应用的初始化参数(所有servlet共享的参数)
+    3. 实现servlet的转发
+    4. 利用ServletContext对象读取资源文件(.properties文件)
 
 ## 常用方法：
 * this.getServletContext():获取引用

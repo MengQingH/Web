@@ -45,7 +45,7 @@
     If-Modified-Since: Tue, 11 Jul 2000 18:23:51 GMT  (告诉服务器，缓冲中有这个资源文件，该文件的时间是···)
     Referer: http://www.sohu.com/index.jsp  (告诉服务器，我来自哪里,该消息头，常用于防止盗链)
     User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)(浏览器的内核)
-    Cookie
+    Cookie:浏览器中保存的cookie
     Connection: close/Keep-Alive   (保持连接，发完数据后，不关闭连接)
     Date: Tue, 11 Jul 2000 18:23:51 GMT (浏览器发送该http请求的时间)
 可以使用request对象的getHeader方法获取消息头的内容

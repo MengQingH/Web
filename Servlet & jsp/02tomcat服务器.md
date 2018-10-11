@@ -23,7 +23,7 @@
     也称为web应用程序，是多个web资源的集合。可以理解为硬盘上的一个目录，用于管理多个web资源，如html文件、css文件、js文件、动态web页面等
 ## web应用目录：
     开发web应用时，应按照特定的目录结构来存放这些文件，否则可能会无法访问该应用
-                        |-web.xml(配置当前web应用的信息)、taglib.tld  
+                          |-web.xml(配置当前web应用的信息)、taglib.tld  
                 |-WEB-INF-|-lib目录：web应用需要的各种jar文件
                 |         |-classes目录：类的包目录，各种class文件
     web应用目录--

@@ -17,7 +17,7 @@ HttpServletRequest对象代表客户端的请求，当客户端通过Http协议�
     
     //获得请求参数(客户端提交的数据)
     getParameter(String name):获取某个参数的值
-    getParameterValues(String name):
+    getParameterValues(String name):当有多个表单输入框name属性都相同时(图复选框)，获取这些属性的值放入一个String数组中
     getParameterNames():获取全部的消息名，放在一个Enumeration中
 
 ## 实例
