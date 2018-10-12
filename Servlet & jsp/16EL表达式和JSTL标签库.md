@@ -75,12 +75,13 @@ JSTL是对EL表达式的扩展，是一种标签语言，为了方便在jsp中�
 </c:choose>
 ```
 7. <c:forEach>遍历内容</c:forEach>根据条件遍历集合中的内容
-
-<c:forEach
-    var=""设定变量名用于从集合中取出元素
-    item=""要遍历的集合
-    varStatus=""设定变量名，用于存放集合中元素的信息：index当前循环的索引值，count循环的次数，first last是否为第一个、最后一个位置，boolean
-    begin=""起始位置(可选)
-    end=""终止位置(可选)
-    step=""指定循环的步长
->遍历内容</c:forEach>
+```
+    <c:forEach
+        var=""设定变量名用于从集合中取出元素
+        item=""要遍历的集合
+        varStatus=""设定变量名，用于存放集合中元素的信息：index当前循环的索引值，count循环的次数，first last是否为第一个、最后一个位置，boolean
+        begin=""起始位置(可选)
+        end=""终止位置(可选)
+        step=""指定循环的步长
+    >遍历内容</c:forEach>
+```
