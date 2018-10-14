@@ -11,16 +11,16 @@
     4. 利用ServletContext对象读取资源文件(.properties文件)
 
 ## 常用方法：
-* this.getServletContext():获取引用
-* ServletConfig.getServletContext():获取引用
+* this.getServletContext()：获取引用
+* ServletConfig.getServletContext()：获取引用
 
-* setAttribute(String name,Object value):向ServletContext中放入属性
-* getAttribute(String name):取出属性值
-* getAttributeNames():获取所有的属性名放在一个Enumeration中
-* removeAttribute(String name):删除属性
+* setAttribute(String name,Object value)：向ServletContext中放入属性
+* getAttribute(String name)：取出属性值
+* getAttributeNames()：获取所有的属性名放在一个Enumeration中
+* removeAttribute(String name)：删除属性
 
-* getParameter(String name):获取配置参数
-* getParameterNames():获取所有的配置参数名
+* getParameter(String name)：获取配置参数
+* getParameterNames()：获取所有的配置参数名
 
 
 

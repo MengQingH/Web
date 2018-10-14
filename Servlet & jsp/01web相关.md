@@ -9,8 +9,8 @@
     JSP/Servlet(Java Server Page)
 
 # B/S C/S：
-B/S(Browser/Sercer):浏览器服务器方式，程序在web服务器中；浏览器向服务器发送http请求，服务器回应浏览器的请求发送html信息，浏览器显示页面
-C/S(client/server):客户端服务器方式。客户端服务器端都需要写代码
+* B/S(Browser/Sercer)：浏览器服务器方式，程序在web服务器中；浏览器向服务器发送http请求，服务器回应浏览器的请求发送html信息，浏览器显示页面
+* C/S(client/server)：客户端服务器方式。客户端服务器端都需要写代码
 
 web服务器用处：用来响应浏览器的请求
 

@@ -1,24 +1,24 @@
 HttpServletRequest对象代表客户端的请求，当客户端通过Http协议访问服务器时，Http请求头中的所有数据都封装在这个对象中，通过调用这个对象的方法，可以获得这些信息
 
 # 常用方法
-    getRequestURL():返回客户端发出请求时的完整URL
-    getRequestURI():返回客户端请求行中的资源部分
-    getQueryString():返回请求行中的参数部分(参数名+值)，即?后面的资源部分
-    getRemoteAddr():返回发出请求的客户端的IP地址
-    getRemoteHost():返回发出请求的客户端的完整主机号
-    getRemotePort():返回发出请求的客户端的网络端口号
-    getLocalPort():返回web服务器使用的端口号
-    getLocalAddr():返回web服务器使用的ip地址
-    getLocalName():返回web服务器使用的主机名
+    getRequestURL()：返回客户端发出请求时的完整URL
+    getRequestURI()：返回客户端请求行中的资源部分
+    getQueryString()：返回请求行中的参数部分(参数名+值)，即?后面的资源部分
+    getRemoteAddr()：返回发出请求的客户端的IP地址
+    getRemoteHost()：返回发出请求的客户端的完整主机号
+    getRemotePort()：返回发出请求的客户端的网络端口号
+    getLocalPort()：返回web服务器使用的端口号
+    getLocalAddr()：返回web服务器使用的ip地址
+    getLocalName()：返回web服务器使用的主机名
 
     //获得请求头
-    getHeader(String name):获取消息头的值
-    getHeaderNames():获取全部的消息头名，放在一个Enumeration中
+    getHeader(String name)：获取消息头的值
+    getHeaderNames()：获取全部的消息头名，放在一个Enumeration中
     
     //获得请求参数(客户端提交的数据)
-    getParameter(String name):获取某个参数的值
-    getParameterValues(String name):当有多个表单输入框name属性都相同时(图复选框)，获取这些属性的值放入一个String数组中
-    getParameterNames():获取全部的消息名，放在一个Enumeration中
+    getParameter(String name)：获取某个参数的值
+    getParameterValues(String name)：当有多个表单输入框name属性都相同时(图复选框)，获取这些属性的值放入一个String数组中
+    getParameterNames()：获取全部的消息名，放在一个Enumeration中
 
 ## 实例
     获取表单中的内容

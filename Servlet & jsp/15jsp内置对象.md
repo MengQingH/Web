@@ -8,7 +8,7 @@
 
 5. application：相当于Servlet中的ServletContext
 
-6. pageContext:jsp的域对象，可以设置取出属性，只在本页面生效
+6. pageContext：jsp的域对象，可以设置取出属性，只在本页面生效
 
 7. exception：代表运行时的一个异常
 

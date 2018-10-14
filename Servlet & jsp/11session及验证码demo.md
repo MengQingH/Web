@@ -10,14 +10,14 @@
 * 设置同名属性的时候，值会被后来的替换
 
 ## 常用函数
-* request.getSession(boolean):创建一个session对象，如果传入true或者无参数，则没有session时会自动创建，如果传入false，没有session时不会自动创建
-* setAttribute(String name,Object value):向session中放入属性
-* removeAttribute(name):移除该属性
-* setMaxInactiveInterval(int):设置生命周期
-* invalidate():使session失效
-* getAttribute(name):取值
-* getAttributeNames():获取全部的session属性名放入一个Enumeration中
-* getID():获取该session的唯一id
+* request.getSession(boolean)：创建一个session对象，如果传入true或者无参数，则没有session时会自动创建，如果传入false，没有session时不会自动创建
+* setAttribute(String name,Object value)：向session中放入属性
+* removeAttribute(name)：移除该属性
+* setMaxInactiveInterval(int)：设置生命周期
+* invalidate()：使session失效
+* getAttribute(name)：取值
+* getAttributeNames()：获取全部的session属性名放入一个Enumeration中
+* getID()：获取该session的唯一id
 
 ## 设置session
 * 创建session：

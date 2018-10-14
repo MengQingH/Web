@@ -19,12 +19,12 @@
 4. 网站的个性化内容，如定制网站的服务和内容
 
 ## 相关函数
-* public Cookie(String name,String value):创建cookie
-* setValue():设置值
-* setMaxAge():设置生命周期，设置为0时删除该cookie；默认为-1，关闭浏览器时清除cookie
-* getName() getValue():获取cookie的名和值
-* response.addCookie(cookie):把cookie添加到response中
-* request.getCookies():获取http请求中的所有cookie
+* public Cookie(String name,String value)：创建cookie
+* setValue()：设置值
+* setMaxAge()：设置生命周期，设置为0时删除该cookie；默认为-1，关闭浏览器时清除cookie
+* getName() getValue()：获取cookie的名和值
+* response.addCookie(cookie)：把cookie添加到response中
+* request.getCookies()：获取http请求中的所有cookie
 
 ## 创建cookie
 ```java
