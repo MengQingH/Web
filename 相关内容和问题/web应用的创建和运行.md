@@ -24,10 +24,6 @@
 ```
 
 
-## 解决idea中jsp发布后才能修改的问题
-看下条
-
-
 ## on update action和on frame deactivation
 ### on update action
 意思是当手动触发update时，做什么，即当手动点击update按钮时IDE做什么。
@@ -43,7 +39,50 @@
 * Update classes and resourses：更新Java，jsp和静态资源。Java调试模式下立即生效，运行模式下需要Redeploy才能生效；jsp运行和调试下都立即生效
 
 
-## 解决web应用运行时找不到jdbc驱动的问题
-    详情：ClassNotFound:com.mysql.jdbc.Driver
-    解决方法：在Java项目中，只需要导入驱动包就可以进行数据库的连接。但是在web应用中由于web应用运行在Tomcat容器中，所以只在IDE中加载驱动服务器找不到该驱动。把驱动放入Tomcat的lib文件夹下即可解决该问题。
-
+## 使用myBatis
+1. 把导入myBatis的jar包导入
+2. 在src下新建全局配置文件（没有名称和地址的要求）
+    ```xml
+    <!-- 在全局配置中引入DTD或schema -->
+    <!DOCTYPE configuration
+            PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+            "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    <configuration>
+        <!--声明环境的集合。default引用的是environment的id，表示当前使用的是该环境-->
+        <environments default="default">
+            <!--声明可能使用的环境，内部是数据库相关内容-->
+            <environment id="default">
+                <!--设置事务的方式-->
+                <transactionManager type="JDBC"></transactionManager>
+                <!--数据库连接池-->
+                <dataSource type="POOLED">
+                    <!--jdbc的变量配置-->
+                    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+                    <property name="url" value="jdbc:mysql://localhost:3306/ssm"/>
+                    <property name="username" value="root"/>
+                    <property name="password" value="123456"/>
+                </dataSource>
+            </environment>
+        </environments>
+        <mappers>
+            <mapper resource="mapper/FlowerMapper.xml"/>
+        </mappers>
+    </configuration>
+    ```
+3. 在src目录下新建一个以mapper结尾的包，在包下新建：实体类名+Mapper.xml文件。作用：编写需要执行的sql命令，相当于实现类。
+    ```xml
+    <!DOCTYPE mapper
+            PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+            "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!--namespace:实现类的全路径(包名+类名)-->
+    <mapper namespace="F">
+        <!--id：方法名
+        parameterType：定义参数类型
+        resultType：返回值类型，如果返回值是List，则需要写明List的泛型，因为myBatis是对jdbc进行封装，一行一行读取数据
+        -->
+        <select id="selAll" parameterType="">
+            select
+        </select>
+    </mapper>
+    ```
+4. 测试结果

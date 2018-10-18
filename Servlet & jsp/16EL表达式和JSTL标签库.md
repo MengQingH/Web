@@ -47,6 +47,9 @@ EL表达式中定义了11个隐含对象，使用这些隐含对象可以很方�
 
 # JSTL标签库
 JSTL是对EL表达式的扩展，是一种标签语言，为了方便在jsp中编写逻辑相关的语句。不是jsp内置的标签，需要导包
+```js
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+```
 
 ## JSTL核心标签库
 1. <c:out value=""></c:out>：输出语句，可输出value属性的内容，其中可传入字符串或者EL表达式。其他属性：
