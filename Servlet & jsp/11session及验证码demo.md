@@ -116,6 +116,7 @@ public class CreateCode extends HttpServlet {
         g.drawString(num,0,20);
 
         //把写好的图片输出给浏览器
+        //ImageIO是一个工具类,可以把指定的图片添加到输出流中
         ImageIO.write(image,"jpg",response.getOutputStream());
 
     }

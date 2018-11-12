@@ -17,7 +17,7 @@
 4. 使用框架创建新的实体类对象
 ```java
 //加载配置文件，配置文件被加载时，容器就创建对象
-//Appliaction接口是spring中最基本的一个容器
+//AppliactionContext接口是spring中最基本的一个容器。实现类ClassPathXmlApplicationContext会从classes根目录下来世查找文件
 ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 //使用容器创建一个实体类，getBean(bean标签的id, 返回值类型)，如果没有返回值类型，默认返回Object
 People people = ac.getBean("peo", People.class);
