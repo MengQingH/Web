@@ -27,7 +27,7 @@
 @Repository("")//写在数据访问层类上
 @Controller("")//写在控制器上
 ```
-2. Resource和Autowired：自动注入。
+2. Resource和Autowired：自动注入，在要使用自动注解的属性上使用该注解。
     * Resource是Java中的注解；Autowired是Spring中的注解
     * 不需要属性的get set方法
     * Resource默认使用byName方式注入，如果没有名称相同的属性名，则使用byType注入；Autowired默认使用byType注入
