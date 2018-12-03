@@ -31,37 +31,37 @@ Ant是一种基于Java和XML的项目构建工具。java项目的编译运行打
     2. 用户配置：用户目录下的配置文件
 * 配置步骤
     1. 配置本地仓库的位置
-    ```xml
-    <localRepository>D:/Program Files (x86)/apache-maven-3.6.0/repository</localRepository>
-    ```
+        ```xml
+        <localRepository>D:/Program Files (x86)/apache-maven-3.6.0/repository</localRepository>
+        ```
     2. 配置中央仓库镜像的url
-    ```xml
-    <mirrors>
-        <mirror>
-            <id>alimaven</id>
-            <mirrorOf>repositoryId</mirrorOf>
-            <name>Human Readable Name for this Mirror.</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        </mirror>
-    </mirrors>
-    ```
+        ```xml
+        <mirrors>
+            <mirror>
+                <id>alimaven</id>
+                <mirrorOf>repositoryId</mirrorOf>
+                <name>Human Readable Name for this Mirror.</name>
+                <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            </mirror>
+        </mirrors>
+        ```
     3. 配置jdk版本和开发环境版本一致，必须配置，默认为1.4或1.5，可能出现下载的环境和开发环境不匹配的错误
-    ```xml
-    <profiles>
-        <profile>
-            <id>jdk-1.8</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>1.8</jdk>
-            </activation>
-            <properties>
-                <!-- 源码版本 -->
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <!-- 目标jre版本 -->
-                <maven.compiler.target>1.8</maven.compiler.target>
-                <!-- 编译器版本 -->
-                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-            </properties>
-        </profile>
-    </profiles>
-    ```
+        ```xml
+        <profiles>
+            <profile>
+                <id>jdk-1.8</id>
+                <activation>
+                    <activeByDefault>true</activeByDefault>
+                    <jdk>1.8</jdk>
+                </activation>
+                <properties>
+                    <!-- 源码版本 -->
+                    <maven.compiler.source>1.8</maven.compiler.source>
+                    <!-- 目标jre版本 -->
+                    <maven.compiler.target>1.8</maven.compiler.target>
+                    <!-- 编译器版本 -->
+                    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+                </properties>
+            </profile>
+        </profiles>
+        ```

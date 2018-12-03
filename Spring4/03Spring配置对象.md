@@ -5,15 +5,15 @@
 2. xmlns:xsi：指xml文件遵守xml规范。即schema资源文件中定义的元素遵守sml规范
 3. xmlns:p：使用p标签的命名空间
 4. xmlns:aop：启动AOP功能的命名空间
-```xml
-<!-- 使用到的约束和约束的url -->
-<beans
-    xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    上面两个是基本的命名空间，不可少
-    xmlns:aop="http://www.springframework.org/schema/aop"
->
-```
+    ```xml
+    <!-- 使用到的约束和约束的url -->
+    <beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        上面两个是基本的命名空间，不可少
+        xmlns:aop="http://www.springframework.org/schema/aop"
+    >
+    ```
 
 ## bean
 在配置文件中声明一个对象，声明的是一个对象，Spring会在application中创建该对象。当创建多个该对象的实例时，实际上只是一个对象的多个引用。
@@ -66,14 +66,14 @@
     * map：给对象中的map属性赋值
     * prop：当属性为properties类型时使用该标签赋值
 3. 示例：
-```xml
-<bean id="peo3" class="com.mh.pojo.People">
-    <!-- 使用属性和子标签为对象中的属性赋值 -->
-    <property name="id" value="11"></property>
-    <property name="name">
-        <value>mh</value>
-    </property>
-```
+    ```xml
+    <bean id="peo3" class="com.mh.pojo.People">
+        <!-- 使用属性和子标签为对象中的属性赋值 -->
+        <property name="id" value="11"></property>
+        <property name="name">
+            <value>mh</value>
+        </property>
+    ```
 
 ## bean对象的scope属性：
 设置对象的实例化方式，单例、多例或者是其他的方式。属性值：

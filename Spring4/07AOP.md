@@ -56,6 +56,7 @@ Aspect Oriented Programming，面向切面编程。正常的程序执行流程�
     <aop:pointcut id="mypoint" expression="execution(* test.method2(..))"/>
 </aop:config>
 ```
+
 ## aop:advisor
 向某一个切点上添加通知。属性：
 1. advice-ref：再配置文件中声明要添加的通知类，该属性为类的id
@@ -66,6 +67,7 @@ Aspect Oriented Programming，面向切面编程。正常的程序执行流程�
     <aop:advisor advice-ref="before" pointcut-ref="mypoint"/>
 </aop:config>
 ```
+
 ## aop:aspect
 使用AspectJ方式实现aop时使用的标签，使用该方式需要在ref属性中声明通知类。子标签：
 1. aop:pointcut：声明切点，属性：id、class

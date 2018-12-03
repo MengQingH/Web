@@ -35,22 +35,22 @@ Mapper.xml映射文件中定义了操作数据库的sql，每个sql是一个stat
     * 如果参数是对象，#{属性名}}
     * 如果对象是map，#{key}
     * 需要传入多个参数时，可以用map或者对象来实现
-```xml
-<select id="selAll" parameterType="int" resultType="pojo.Flower">
-    <!-- 使用参数时，可以使用#{0}和#{param1}表示参数的次序，#{0}和#{param1}表示第一个 -->
-    <!-- 当参数只有一个的时候且为基本数据类型或String时，myBatis对{}中的内容没有要求 -->
-    select * FROM  flower where id=#{}
-</select>
-```
+    ```xml
+    <select id="selAll" parameterType="int" resultType="pojo.Flower">
+        <!-- 使用参数时，可以使用#{0}和#{param1}表示参数的次序，#{0}和#{param1}表示第一个 -->
+        <!-- 当参数只有一个的时候且为基本数据类型或String时，myBatis对{}中的内容没有要求 -->
+        select * FROM  flower where id=#{}
+    </select>
+    ```
 2. ${}表示用字符串拼接的方式构成sql语句，不使用?。
     * 如果${}中的是数字，参数就会使用该数字；
     * 如果${}中使用的是字符串内容，参数就会向调用时传入的参数中获取该属性，即使用该方式时，参数需要使用类。
-```xml
-<select id="selAll" parameterType="pojo.Flower" resultType="pojo.Flower">
-    <!-- 调用时传入参数为flower对象，myBatis会从该对象中获取id属性当作sql语句中的参数 -->
-    select * FROM  flower where id=${id}
-</select>
-```
+    ```xml
+    <select id="selAll" parameterType="pojo.Flower" resultType="pojo.Flower">
+        <!-- 调用时传入参数为flower对象，myBatis会从该对象中获取id属性当作sql语句中的参数 -->
+        select * FROM  flower where id=${id}
+    </select>
+    ```
 
 ### 查询实现分页
 分页查询语句：select * from table limit (pageNow-1)*pageSize, pageSize。由于使用#{}方式时不能在sql语句中计算，所以在select标签中，可以使用语句select * from table limit #{pageStart}
@@ -63,11 +63,11 @@ Mapper.xml映射文件中定义了操作数据库的sql，每个sql是一个stat
 
 ## ResultMap
 1. 在select查询语句中，如果resultType的类型为map，myBatis会自动把结果集中的列名和列值放入到map中返回。
-```xml
-<select id="selAll" resultType="map">
-    select * FROM  flower
-</select>
-```
+    ```xml
+    <select id="selAll" resultType="map">
+        select * FROM  flower
+    </select>
+    ```
 2. 如果使用了resultType的值为相应的Javabean或者是pojo对象，myBatis会基于属性名把ResultSet中的内容映射到Javabean对象的属性中，再返回该Javabean对象。（AutoMappinng特性）
 3. 如果Javabean中的属性名和数据库中的列名不相同，可以在select语句中对列名使用别名来匹配，在列名后加上实体类中的对应的属性名。如：
     ```java
