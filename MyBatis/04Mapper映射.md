@@ -88,7 +88,7 @@ Mapper.xml映射文件中定义了操作数据库的sql，每个sql是一个stat
         * select：使用一个其他映射中的sql语句返回一个Java实体类型
         * column：把当前列表的哪列的值作为参数传递给select中的查询
     * collection：关联多个其他实体类对象（通常以一个集合的形式）
-        * favaType：集合中的对象类型
+        * javaType：集合中的对象类型
         * property：
         * select：
         * column：
